@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="/OtherStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div id="weather-box" class="box">
+            <div id="city" class="city">@ViewBag.selection.CityName</div>
+            <div id="date-time" class="date-time">@ViewBag.selection.DateAndTime.ToString("dd MMM yyyy | HH:mm")</div>
+            <div id="temperature" class="temperature">@ViewBag.selection.TemperatureFahrenheit°F</div>
+            <a href="/weather" class="link">Back</a>
+        </div>
+    </div>
+</body>
+</html>

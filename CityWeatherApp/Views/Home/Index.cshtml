@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CityWeather>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="/StyleSheet.css">
+</head>
+<body>
+    <div class="container">
+
+        @foreach (CityWeather city in Model)
+        {
+            <div class="box">
+                <div class="city">@city.CityName</div>
+                <div class="date-time">@city.DateAndTime.ToString("HH:mm")</div>
+                <div class="temperature">@city.TemperatureFahrenheit°F</div>
+                <a href="/weather/@city.CityUniqueCode">Details</a>
+            </div>
+        }
+    </div>
+</body>
+</html>
+
+    
